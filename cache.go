@@ -86,7 +86,7 @@ func runJanitor(c *cache, ci time.Duration) { // {{{
 	if PubSubOpen {
 		go j.runBroadcast(c)
 
-		//监控广播redis, 有异常重启
+		//监控广播redis, 有异常则重启
 		go func() {
 			for {
 				select {
